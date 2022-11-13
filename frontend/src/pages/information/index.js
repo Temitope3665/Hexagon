@@ -1,12 +1,13 @@
-import { Box, Text } from "@chakra-ui/react"
-import DashboardContainer from "../container/dashboardContainer";
+import { Box } from "@chakra-ui/react"
+import DashboardContainer from "../../container/dashboardContainer";
+import InformationTemp from "../../templates/InformationTemp";
 
 const InformationHome = () => {
     return (
         <Box>
             <DashboardContainer>
                 <Box p="20px">
-                    <Text fontSize="50px">Information Container</Text>
+                    <InformationTemp />
                 </Box>
             </DashboardContainer>
         </Box>

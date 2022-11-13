@@ -46,4 +46,9 @@ export const currentServices = [
         name: "Consult Manufacturer",
         icon: manIcon
     },
+];
+
+
+export const relatedDrugs = [
+   "Gabapentin", "Ibuprofen", "Oxycodone", "Acetaminophen", "Hydrocodone", "Tramadol", "Diclofenac"
 ]

@@ -6,7 +6,7 @@ const DashboardHome = () => {
     return (
         <Box>
             <DashboardContainer>
-                <Box p="20px" width="100%">
+                <Box p="20px">
                     <DashboardTemp />
                 </Box>
             </DashboardContainer>

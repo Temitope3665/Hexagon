@@ -108,3 +108,9 @@ export const closeModal = (
   <path d="M20.5007 32.0007L28.5007 40.0007L44.5007 24.0007M59.1673 32.0007C59.1673 46.7282 47.2282 58.6673 32.5007 58.6673C17.7731 58.6673 5.83398 46.7282 5.83398 32.0007C5.83398 17.2731 17.7731 5.33398 32.5007 5.33398C47.2282 5.33398 59.1673 17.2731 59.1673 32.0007Z" stroke="#56BC81" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   );
+
+  export const rightArr = (
+    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.4125 2.375L5.25 3.5375L11.2125 9.5L5.25 15.4625L6.4125 16.625L13.5 9.5L6.4125 2.375Z" fill="#3A3A3A"/>
+</svg>
+  );

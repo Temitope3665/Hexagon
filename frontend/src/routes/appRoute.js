@@ -6,6 +6,8 @@ import theme from "../theme";
 import DashboardHome from "../pages";
 import VerificationHome from "../pages/verification";
 import InformationHome from "../pages/information";
+import StepTwo from "../pages/information/step-2";
+import ProductDetailsHome from "../pages/information/product-details";
 
 const AppRoute = () => {
 
@@ -14,8 +16,10 @@ const AppRoute = () => {
      <ChakraProvider theme={theme} resetCSS>
       <Routes>
         <Route index path="/" element={<DashboardHome />} />
-        <Route index path="/verification" element={<VerificationHome />} />
-        <Route index path="/information" element={<InformationHome />} />
+        <Route path="/verification" element={<VerificationHome />} />
+        <Route path="/information" element={<InformationHome />} />
+        <Route path="/information/step-2" element={<StepTwo />} />
+        <Route path="/information/product-details" element={<ProductDetailsHome />} />
       </Routes>
      </ChakraProvider>
     </BrowserRouter>,
