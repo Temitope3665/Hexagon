@@ -1,12 +1,13 @@
-import { Box, Text } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import DashboardContainer from "../container/dashboardContainer";
+import VerificationTemp from "../templates/VerificationTemp";
 
 const VerificationHome = () => {
     return (
         <Box>
             <DashboardContainer>
                 <Box p="20px">
-                    <Text fontSize="50px">Verification Container</Text>
+                    <VerificationTemp />
                 </Box>
             </DashboardContainer>
         </Box>
