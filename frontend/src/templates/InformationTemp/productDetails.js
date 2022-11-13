@@ -1,20 +1,11 @@
 import {
   Box,
   Flex,
-  Image,
-  SimpleGrid,
   Text,
-  useDisclosure,
 } from "@chakra-ui/react";
-import VerificationIcon from "../../assets/icons/verification-icon.png";
-import CustomButton from "../../components/CustomButton/customButton";
-import SuccessModal from "../../components/Modal/successModal";
-import TextInput from "../../components/TextInputs/TextInput";
-import LatestNews from "../LatestNews";
 import RelatedDrugs from "../LatestNews/relatedDrugs";
 
 const ProductDetailsTemp = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Flex w="100%">
