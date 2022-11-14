@@ -1,8 +1,21 @@
 import { Box, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import CustomButton from "../../components/CustomButton/customButton";
 import TextInput from "../../components/TextInputs/TextInput";
+import { useNavigate } from "react-router-dom";
+import { toaster } from "evergreen-ui";
 
 const StepTwoTemp = () => {
+  const [code, setCode] = useState('');
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (code === "B01AC06") {
+      navigate('/information/product-details');
+    } else {
+      toaster.danger("Error occured, code not valid!");
+    }
+  }
   return (
     <Box w="100%" bg="white" p="30px" borderRadius="8px">
       <Box>
@@ -11,14 +24,15 @@ const StepTwoTemp = () => {
           To get started, kindly enter the brand name of the drug and follow the
           steps below.
         </Text>
-        <TextInput placeholder="Enter unique code" />
+        <TextInput placeholder="Enter unique code" value={code} onChange={(e) => setCode(e.target.value)} />
         <CustomButton
           color="brand.white"
           bg="brand.blue"
           w="130px"
           mt="20px"
           mx="auto"
-          href="/information/product-details"
+          onClick={handleClick}
+          disabled={!code}
         >
           Learn more
         </CustomButton>

@@ -63,7 +63,7 @@ function SuccessModal({
                 testid="on-close"
                 href="#"
               >
-                Report
+                Great !
               </CustomButton>
 
               <CustomButton
@@ -76,7 +76,7 @@ function SuccessModal({
                 testid="on-close"
                 href="#"
               >
-                No, thanks
+                Test another product ?
               </CustomButton>
             </Box>
           </Box>

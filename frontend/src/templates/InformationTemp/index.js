@@ -22,7 +22,7 @@ const InformationTemp = () => {
           mx="auto"
           href="/information/step-2"
         >
-          Scan
+          Skip Scan
         </CustomButton>
       </Box>
 

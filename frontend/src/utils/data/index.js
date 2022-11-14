@@ -50,5 +50,16 @@ export const currentServices = [
 
 
 export const relatedDrugs = [
-   "Gabapentin", "Ibuprofen", "Oxycodone", "Acetaminophen", "Hydrocodone", "Tramadol", "Diclofenac"
-]
+    {
+        name: "Ibuprofen",
+        link: "https://www.nhs.uk/medicines/ibuprofen-for-adults/",
+    },
+    {
+        name: "Naproxen",
+        link: "https://www.nhs.uk/medicines/naproxen/",
+    },
+    {
+        name: "Diclofenac",
+        link: "https://www.nhs.uk/medicines/diclofenac/",
+    },
+];

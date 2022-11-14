@@ -18,10 +18,12 @@ const RelatedDrugs = () => {
         {relatedDrugs.map((drug, index) => (
           <>
           <Divider my="10px" />
-          <Flex justifyContent="space-between" fontSize="14px" mt="20px" key={index} cursor="pointer">
-              <Text>{drug}</Text>
-              <Box>{rightArr}</Box>
-          </Flex>
+          <a href={drug.link} target="_blank" rel="noreferrer">
+            <Flex justifyContent="space-between" fontSize="14px" mt="20px" key={index} cursor="pointer">
+                <Text>{drug.name}</Text>
+                <Box>{rightArr}</Box>
+            </Flex>
+          </a>
           </>
         ))}
 

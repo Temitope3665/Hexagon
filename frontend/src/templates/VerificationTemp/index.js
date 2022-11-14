@@ -6,14 +6,26 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import VerificationIcon from "../../assets/icons/verification-icon.png";
 import CustomButton from "../../components/CustomButton/customButton";
 import SuccessModal from "../../components/Modal/successModal";
 import TextInput from "../../components/TextInputs/TextInput";
 import LatestNews from "../LatestNews";
+import { toaster } from "evergreen-ui";
 
 const VerificationTemp = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [code, setCode] = useState('');
+
+  const handleClick = () => {
+    if (code === "62991117606") {
+      onOpen();
+    } else {
+      toaster.danger("Error occured, code not valid!");
+    }
+  }
+
 
   return (
     <Flex w="100%">
@@ -43,14 +55,15 @@ const VerificationTemp = () => {
         <Box bg="brand.white" p="40px" mt="40px" borderRadius="8px">
           <Text fontSize="20px">Enter product ID to verify</Text>
           <Text>Please follow the steps below to authenticate your drugs</Text>
-          <TextInput placeholder="Enter unique code" />
+          <TextInput placeholder="Enter unique code" value={code} onChange={(e) => setCode(e.target.value)} />
 
           <CustomButton
-            onClick={() => onOpen()}
+            onClick={handleClick}
             color="brand.white"
             bg="brand.blue"
             w="130px"
             mt="20px"
+            disabled={!code}
           >
             Verify
           </CustomButton>
@@ -85,19 +98,19 @@ const VerificationTemp = () => {
       <SuccessModal
         isOpen={isOpen}
         onClose={onClose}
-        message="Authetication Invalid"
+        message="Authetication Verified"
         handleNoOnclick={() => onClose()}
       >
         <Text>
-          This product has already been purchased and verified by another user.
+          This product is valid.
         </Text>
       <Box textAlign="left" mt="20px">
       <Text fontWeight="600">Product Info</Text>
-        <Text>Product name: Paracetamol</Text>
-        <Text>Product ID: t373dbjdjf</Text>
-        <Text>Manufacturer: Farmson</Text>
-        <Text>Production date: 20/10/2022</Text>
-        <Text>Expiry date: 20/10/2023</Text>
+        <Text>Product name: ASPIRIN</Text>
+        <Text>Product ID: 62991117606</Text>
+        <Text>Manufacturer: Bayer</Text>
+        <Text>Shelf life: 2 years</Text>
+        <Text>Date of first authorisation/renewal of the authorisation: 07/10/2016</Text>
       </Box>
       </SuccessModal>
     </Flex>
