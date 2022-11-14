@@ -61,7 +61,7 @@ function SuccessModal({
                 hoverBg="brand.primary"
                 hoverColor="brand.white"
                 testid="on-close"
-                href="#"
+                // href="/verification"
               >
                 Great !
               </CustomButton>

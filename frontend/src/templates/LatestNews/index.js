@@ -20,7 +20,7 @@ const LatestNews = () => {
       .then((res) => {
         setNews(res?.data?.articles);
       })
-      .catch(() => toaster.danger("Error occured"))
+      .catch()
       .finally(() => setIsLoading(false));
   }, []);
 
@@ -36,7 +36,7 @@ const LatestNews = () => {
       <Box mt="20px">
         <Divider />
 
-      {isLoading ? <Spinner /> :
+      {/* {isLoading ? <Spinner /> :
       <>
         {news.splice(0, 10).map((res, index) => (
           <>
@@ -53,7 +53,7 @@ const LatestNews = () => {
           </>
         ))}
       </>
-      }
+      } */}
 
         <Flex alignItems="center" jusstifyContent="space-between" bg="brand.blue" mt="
         20px" p="20px">
