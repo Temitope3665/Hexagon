@@ -35,14 +35,14 @@ const DashboardTemp = () => {
                         <Box bg="#F3F6FB" p="40px 20px">
                             <Text color="brand.blue">Would you like to use your computer to get information on drugs?</Text>
 
-                            <CustomButton bg="brand.blue" borderRadius="8px" mt="40px">
+                            <CustomButton bg="brand.blue" borderRadius="8px" mt="40px" href="/verification">
                                 <Text color="brand.white">Scan</Text>
                             </CustomButton>
                         </Box>
                         <Box bg="#F3F6FB" p="40px 20px">
                             <Text color="brand.blue">Get information using the brand’s name written on drugs.</Text>
 
-                            <CustomButton bg="brand.blue" borderRadius="8px" mt="40px">
+                            <CustomButton bg="brand.blue" borderRadius="8px" mt="40px" href="/information">
                                 <Text color="brand.white">Get info</Text>
                             </CustomButton>
                         </Box>
