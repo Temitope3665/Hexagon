@@ -13,8 +13,6 @@ const SideLinks = () => {
         const { icon, title, link, activeIcon } = items;
         const isCurrentPage = pathname === link;
 
-        console.log(pathname);
-        console.log(link);
       return (
 
         <a href={link}>
@@ -35,7 +33,6 @@ const SideLinks = () => {
             key={index}
           >
             <Box>{isCurrentPage ? activeIcon : icon}</Box>
-            {console.log(pathname === link)}
             <Text ml="10px">{title}</Text>
           </Flex>
         </a>
